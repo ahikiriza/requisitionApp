@@ -1,0 +1,9 @@
+﻿#backend
+Django==4.2.4
+django-cors-headers==4.2.0
+djangorestframework==3.14.0
+
+#frontend
+Angular CLI: 10.2.1
+Node: 12.22.9
+npm: 8.5.1

@@ -1,0 +1,36 @@
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card bg-primary">
+            <div class="card-body">
+                <i class="fa fa-check-square text-info"></i>
+                <h5 class="card-title">Students</h5>
+                <p>{{ students | number }}</p>
+                <a class="nav-link" [routerLink]="'/view-applications'"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-light">
+            <div class="card-body">
+                <i class="fa fa-times text-danger"></i>
+                <h5 class="card-title">Females</h5>
+                <p>{{ females | number }}</p>
+                <a class="nav-link" [routerLink]="'/view-applications'"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-success">
+            <div class="card-body">
+                <i class="fa fa-heart text-success"></i>
+                <h5 class="card-title">Males</h5>
+                <p>{{ males | number }}</p>
+                <a class="nav-link" [routerLink]="'/view-applications'"></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+

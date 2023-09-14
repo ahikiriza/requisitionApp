@@ -1,0 +1,26 @@
+<nav class="sidebar">
+    <div class="logo">
+        <a [routerLink]="'summary'">
+            <img src="/assets/images/logo.png" alt="logo" style="width: 40%;"/>
+        </a>
+    </div>
+
+    <div class="navigation">
+        <ul class="list-unstyled">
+            
+            <li [routerLink]="'/dashboard'" routerLinkActive="active">
+                <a>Dashboard</a>
+            </li>
+
+            <li [routerLink]="'/add-application'" routerLinkActive="active">
+                <a>Add Student</a>
+            </li>
+            
+            <li [routerLink]="'/view-applications'" routerLinkActive="active">
+                <a>View Students</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</nav>

@@ -1,0 +1,106 @@
+<div class="container-fluid mt-4">
+    <div class="card  bg-white">
+      <div class="card-header bg-primary border-0">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <h3 class="mb-0 text-uppercase text-white">Requisition List</h3>
+          </div>
+          <div class="col-6">
+          <button (click)="redirectToAddStudent()" class="btn btn-success float-right">Add Student</button>
+          </div>
+        </div>        
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+
+            <!-- <table>
+              <ng-template pTemplate="header">
+                <tr>
+                  <th *ngFor="let col of cols">
+                    {{ col.header }}
+                  </th>
+                  <th>Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr>
+                  <td *ngFor="let col of cols">
+                    {{ rowData[col.field] }}
+                  </td>
+                  <td> <a style="padding: 10px; cursor: pointer;" [routerLink]="['/staff/view', rowData.id]">
+                      <i class=" fas fa-edit action_icon" (click)="redirectToUpdatePage(rowData.id)"></i></a>
+                  </td>
+                </tr>
+              </ng-template>
+            </table> -->
+
+
+            <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Gender</th>
+                      <th scope="col">Registration Number</th>
+                      <th scope="col">Hall of Residence</th>
+                      <th scope="col">Residence</th>
+                      <th scope="col">Course Name</th>
+                      <th scope="col">Telephone</th>
+                      <!-- <th scope="col">Email</th> -->
+                      <th scope="col">AccountNumber</th>
+                      <th scope="col">Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <tr *ngFor="let student of students let i =index" >
+                          <td scope="row">{{i+1}}</td>
+                          <td>{{ student?.name }}</td>
+                          <td>{{ student?.gender }}</td>
+                          <td>{{ student?.registrationNumber }}</td>
+                          <td>{{ student?.hall }}</td>
+                          <td>{{ student?.residence }}</td>
+                          <td>{{ student?.course }}</td>
+                          <td>{{ student?.telephone }}</td>
+                          <!-- <td>{{ student?.email }}</td> -->
+                          <td>{{ student?.accountNumber }}</td>
+                          <td>
+                              <button class="btn btn-success" routerLink="/update/{{student.id}}">Edit</button>
+                              <button class="btn btn-danger mx-2" (click) ="deleteStudent(student.id)">Delete</button>
+                          </td>
+                      </tr> 
+          
+              </tbody>
+          </table>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
